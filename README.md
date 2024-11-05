@@ -1,4 +1,4 @@
-![ScreenShot](/dark.png)
+![ScreenShot](./dark.png)
 
 # Astro Starter Kit: Minimal
 
