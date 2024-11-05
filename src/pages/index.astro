@@ -10,7 +10,24 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-slate-200 dark:bg-slate-800 flex h-screen justify-center items-center flex-col">
+		<button id="toggle-theme" class=" border rounded p-3 bg-slate-800 dark:bg-slate-200 dark:text-slate-800 text-slate-200">Tooggle Dark Theme</button>
+		<h1 class="text-3xl font-bold text-slate-800 dark:text-slate-200 p-5">Astro Tailwind Dark Theme</h1>
 	</body>
+	<script>
+		const themeToggle = document.getElementById('toggle-theme');
+		const htmlElement= document.documentElement;
+
+		if(localStorage.getItem('theme')==='dark'){
+			htmlElement.classList.add('dark')
+		}
+
+		themeToggle.addEventListener('click',()=>{
+			htmlElement.classList.toggle('dark');
+			const newTheme = htmlElement.classList.contains('dark')?'dark':'light';		
+			localStorage.setItem('theme', newTheme)	
+		})
+	</script>
 </html>
+
+
