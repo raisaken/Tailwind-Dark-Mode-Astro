@@ -1,3 +1,5 @@
+![ScreenShot](/dark.png)
+
 # Astro Starter Kit: Minimal
 
 ```sh
